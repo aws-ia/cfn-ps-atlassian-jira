@@ -1518,6 +1518,13 @@ Resources:
       ToPort: -1
       SourceSecurityGroupId: !Ref SecurityGroup
   EncryptionKey:
+    Metadata:
+      cfn-lint:
+        config:
+          ignore_checks:
+            - EIAMPolicyWildcardResource
+          ignore_reasons:
+            - EIAMPolicyWildcardResource: Intent assumed for initial migration. 
     Condition: UseDatabaseEncryption
     DeletionPolicy: Retain
     UpdateReplacePolicy: Retain
