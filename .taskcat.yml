@@ -1,5 +1,5 @@
 project:
-  name: quickstart-atlassian-jira
+  name: cfn-ps-atlassian-jira
   owner: quickstart-eng@amazon.com
   package_lambda: false
   s3_regional_buckets: true
@@ -19,7 +19,7 @@ tests:
       DBStorageType: Provisioned IOPS
       KeyPairName: replaced-by-taskcat-override-file
       QSS3BucketName: $[taskcat_autobucket]
-      QSS3KeyPrefix: quickstart-atlassian-jira/
+      QSS3KeyPrefix: cfn-ps-atlassian-jira/
     regions:
     - us-east-1
     s3_bucket: ''
